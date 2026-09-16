@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Services - HealthCare Clinic</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+        }
+
+        header {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo small {
+            display: block;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #fee2e2;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 70px 20px 40px;
+            background: white;
+        }
+
+        .page-title h1 {
+            font-size: 45px;
+            color: #172554;
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            color: #64748b;
+            font-size: 19px;
+        }
+
+        .services {
+            padding: 50px 7%;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h2 {
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .appointment {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fee2e2;
+        }
+
+        .appointment h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #dc2626;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #991b1b;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        🩺 HealthCare
+
+        <small>
+            DR. L.S.PAL Clinic
+        </small>
+
+    </div>
+
+
+    <nav>
+
+        <a href="../index.html">🏠 Home</a>
+
+        <a href="../doctor/doctor.html">👨‍⚕️ Doctor</a>
+
+        <a href="services.html">🏥 Services</a>
+
+
+    </nav>
+
+</header>
+
+
+<section class="page-title">
+
+    <h1>Our Medical Services</h1>
+
+    <p>
+        Quality healthcare services for you and your family
+    </p>
+
+</section>
+
+
+<section class="services">
+
+    <div class="service-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🩺
+            </div>
+
+            <h2>
+                General Consultation
+            </h2>
+
+            <p>
+                Consultation and treatment for
+                common health problems, fever,
+                cold, cough and other illnesses.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ❤️
+            </div>
+
+            <h2>
+                Health Checkup
+            </h2>
+
+            <p>
+                Regular health checkups help
+                identify health problems early
+                and maintain a healthy lifestyle.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                💊
+            </div>
+
+            <h2>
+                Medical Treatment
+            </h2>
+
+            <p>
+                Professional medical guidance
+                and treatment according to
+                the patient's needs.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🧪
+            </div>
+
+            <h2>
+                Diagnostic Services
+            </h2>
+
+            <p>
+                Basic diagnostic services to
+                help doctors understand and
+                evaluate health conditions.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                👨‍⚕️
+            </div>
+
+            <h2>
+                Doctor Consultation
+            </h2>
+
+            <p>
+                Get professional advice and
+                consultation from experienced
+                healthcare professionals.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🚑
+            </div>
+
+            <h2>
+                Emergency Support
+            </h2>
+
+            <p>
+                Contact the clinic immediately
+                for urgent medical assistance
+                and guidance.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="appointment">
+
+    <h2>
+        Need a Consultation?
+    </h2>
+
+    <p>
+        Book your appointment with our clinic.
+    </p>
+
+    <br>
+
+    <a class="btn"
+       href="../appointment/appointment.html">
+
+        📅 Book Appointment
+
+    </a>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 HealthCare Clinic | DR. L.S.PAL Clinic
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

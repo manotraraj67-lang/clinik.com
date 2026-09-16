@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin - HealthCare Clinic</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <style>
+
+        .admin-box {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        .admin-table th,
+        .admin-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .admin-table th {
+            background: #df2027;
+            color: white;
+        }
+
+        .admin-section {
+            margin-bottom: 60px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        🩺 HealthCare
+        <small>ADMIN PANEL</small>
+    </div>
+
+
+    <nav>
+
+        <a href="../index.html">
+            🏠 Home
+        </a>
+
+        <a href="../doctor/doctor.html">
+            👨‍⚕️ Doctor
+        </a>
+
+        <a href="../services/services.html">
+            🏥 Services
+        </a>
+
+        <a href="../contact/contact.html">
+            💬 Feedback
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<section>
+
+    <div class="admin-box">
+
+
+        <h2>
+            Admin Dashboard
+        </h2>
+
+
+        <div class="admin-section">
+
+            <h3>
+                📅 Appointments
+            </h3>
+
+
+            <table
+                class="admin-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            Phone
+                        </th>
+
+                        <th>
+                            Service
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="appointmentData">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <div class="admin-section">
+
+            <h3>
+                💬 Feedback
+            </h3>
+
+
+            <table
+                class="admin-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            Email
+                        </th>
+
+                        <th>
+                            Feedback
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="feedbackData">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+async function loadAppointments() {
+
+    const response =
+        await fetch("/api/appointments");
+
+    const data =
+        await response.json();
+
+
+    const table =
+        document.getElementById(
+            "appointmentData"
+        );
+
+
+    table.innerHTML = "";
+
+
+    data.forEach(item => {
+
+        table.innerHTML += `
+
+            <tr>
+
+                <td>
+                    ${item.name}
+                </td>
+
+                <td>
+                    ${item.phone}
+                </td>
+
+                <td>
+                    ${item.service}
+                </td>
+
+                <td>
+                    ${item.date}
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+}
+
+
+
+async function loadFeedback() {
+
+    const response =
+        await fetch("/api/feedback");
+
+    const data =
+        await response.json();
+
+
+    const table =
+        document.getElementById(
+            "feedbackData"
+        );
+
+
+    table.innerHTML = "";
+
+
+    data.forEach(item => {
+
+        table.innerHTML += `
+
+            <tr>
+
+                <td>
+                    ${item.name}
+                </td>
+
+                <td>
+                    ${item.email}
+                </td>
+
+                <td>
+                    ${item.message}
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+}
+
+
+loadAppointments();
+
+loadFeedback();
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HealthCare - DR. L.S.PAL Clinic</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fc;
+            color: #172554;
+        }
+
+        /* HEADER */
+        header {
+            height: 90px;
+            background: linear-gradient(90deg, #e31e24, #c9151b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            color: white;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            margin-bottom: 3px;
+        }
+
+        .logo small {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe4e4;
+            transform: translateY(-2px);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: calc(100vh - 90px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+            gap: 50px;
+        }
+
+        .hero-content {
+            width: 52%;
+        }
+
+        .welcome {
+            color: #e31e24;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #172554;
+        }
+
+        .hero h2 span {
+            color: #e31e24;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #52627a;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .feature {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            min-width: 150px;
+        }
+
+        .feature strong {
+            display: block;
+            font-size: 17px;
+            margin-top: 8px;
+        }
+
+        .feature span {
+            font-size: 30px;
+        }
+
+        .appointment-btn {
+            display: inline-block;
+            background: #e31e24;
+            color: white;
+            padding: 17px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: bold;
+            box-shadow: 0 7px 18px rgba(227,30,36,0.3);
+            transition: 0.3s;
+        }
+
+        .appointment-btn:hover {
+            background: #b91419;
+            transform: translateY(-3px);
+        }
+
+        /* MEDICAL IMAGE / ILLUSTRATION */
+        .hero-image {
+            width: 43%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .doctor-card {
+            width: 440px;
+            height: 440px;
+            background: linear-gradient(145deg, #dff3ff, #ffffff);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(30,64,175,0.15);
+        }
+
+        .doctor {
+            text-align: center;
+            font-size: 130px;
+        }
+
+        .doctor-text {
+            position: absolute;
+            bottom: 55px;
+            background: white;
+            padding: 14px 25px;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            font-weight: bold;
+            color: #172554;
+            font-size: 18px;
+        }
+
+        .cross {
+            position: absolute;
+            top: 40px;
+            right: 55px;
+            font-size: 50px;
+            color: #e31e24;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: 65px;
+            left: 45px;
+            font-size: 45px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            header {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 20px;
+            }
+
+            .hero-content,
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .features {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .doctor-card {
+                width: 320px;
+                height: 320px;
+            }
+
+            .doctor {
+                font-size: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            <div class="logo-icon">🩺</div>
+
+            <div>
+                <h1>HealthCare</h1>
+                <small>DR. L.S.PAL Clinic</small>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">🏠 Home</a>
+            <a href="doctor/doctor.html">👨‍⚕️ Doctor</a>
+            <a href="services/services.html">🏥 Services</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="welcome">
+                WELCOME TO DR. L.S.PAL CLINIC
+            </div>
+
+            <h2>
+                Your Health Is
+                <span>Our Priority</span>
+            </h2>
+
+            <p>
+                We provide trusted and compassionate healthcare services
+                with experienced doctors, modern facilities and
+                patient-focused care.
+            </p>
+
+
+            <!-- FEATURES -->
+            <div class="features">
+
+                <div class="feature">
+                    <span>👨‍⚕️</span>
+                    <strong>Expert Doctors</strong>
+                </div>
+
+                <div class="feature">
+                    <span>🏥</span>
+                    <strong>Quality Care</strong>
+                </div>
+
+                <div class="feature">
+                    <span>❤️</span>
+                    <strong>Patient First</strong>
+                </div>
+
+            </div>
+
+
+            <!-- ONLY BUTTON -->
+            <a href="appointment/appointment.html"
+               class="appointment-btn">
+                📅 Book Appointment
+            </a>
+
+        </div>
+
+
+        <!-- HEALTHCARE IMAGE / ILLUSTRATION -->
+        <div class="hero-image">
+
+            <div class="doctor-card">
+
+                <div class="cross">✚</div>
+
+                <div class="doctor">
+                    👨‍⚕️
+                </div>
+
+                <div class="heart">
+                    ❤️
+                </div>
+
+                <div class="doctor-text">
+                    Professional Healthcare
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
